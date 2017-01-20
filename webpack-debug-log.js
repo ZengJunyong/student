@@ -19,7 +19,7 @@ var config = {
     }
 }
 
-var webpackConfig = {
+var webpackConfigDev = {
     "entry": {"app": ["./build/dev-client", "./src/main.js"]},
     "output": {
         "path": "/Users/junyong/elance/student/dist",
@@ -141,4 +141,99 @@ var webpackConfig = {
         "__dirname": "mock"
     },
     "optimize": {"occurenceOrderPreferEntry": true}
+}
+
+var webpackConfigProduction = {
+    "entry": {"app": "./src/main.js"},
+    "output": {
+        "path": "/Users/junyong/elance/student/dist",
+        "publicPath": "/",
+        "filename": "static/js/[name].[chunkhash].js",
+        "chunkFilename": "static/js/[id].[chunkhash].js"
+    },
+    "resolve": {
+        "extensions": ["", ".js", ".vue", ".json"],
+        "fallback": ["/Users/junyong/elance/student/node_modules"],
+        "alias": {
+            "vue$": "vue/dist/vue.common.js",
+            "src": "/Users/junyong/elance/student/src",
+            "assets": "/Users/junyong/elance/student/src/assets",
+            "components": "/Users/junyong/elance/student/src/components"
+        }
+    },
+    "resolveLoader": {"fallback": ["/Users/junyong/elance/student/node_modules"]},
+    "module": {
+        "loaders": [{
+            "test": {},
+            "loader": "/Users/junyong/elance/student/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap"
+        }, {
+            "test": {},
+            "loader": "/Users/junyong/elance/student/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap"
+        }, {
+            "test": {},
+            "loader": "/Users/junyong/elance/student/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap!less-loader?sourceMap"
+        }, {
+            "test": {},
+            "loader": "/Users/junyong/elance/student/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap!sass-loader?indentedSyntax&sourceMap"
+        }, {
+            "test": {},
+            "loader": "/Users/junyong/elance/student/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap!sass-loader?sourceMap"
+        }, {
+            "test": {},
+            "loader": "/Users/junyong/elance/student/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap!stylus-loader?sourceMap"
+        }, {
+            "test": {},
+            "loader": "/Users/junyong/elance/student/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap!stylus-loader?sourceMap"
+        }, {"test": {}, "loader": "vue"}, {
+            "test": {},
+            "loader": "babel",
+            "include": ["/Users/junyong/elance/student/src"],
+            "exclude": {}
+        }, {"test": {}, "loader": "json"}, {
+            "test": {},
+            "loader": "url",
+            "query": {"limit": 10000, "name": "static/img/[name].[hash:7].[ext]"}
+        }, {"test": {}, "loader": "url", "query": {"limit": 10000, "name": "static/fonts/[name].[hash:7].[ext]"}}]
+    },
+    "vue": {
+        "loaders": {
+            "css": "/Users/junyong/elance/student/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap",
+            "postcss": "/Users/junyong/elance/student/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap",
+            "less": "/Users/junyong/elance/student/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap!less-loader?sourceMap",
+            "sass": "/Users/junyong/elance/student/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap!sass-loader?indentedSyntax&sourceMap",
+            "scss": "/Users/junyong/elance/student/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap!sass-loader?sourceMap",
+            "stylus": "/Users/junyong/elance/student/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap!stylus-loader?sourceMap",
+            "styl": "/Users/junyong/elance/student/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap!stylus-loader?sourceMap"
+        }, "postcss": [null]
+    },
+    "devtool": "#source-map",
+    "plugins": [{"definitions": {"process.env": {"NODE_ENV": "\"production\""}}}, {"options": {"compress": {"warnings": false}}}, {}, {
+        "filename": "static/css/[name].[contenthash].css",
+        "options": {},
+        "id": 1
+    }, {
+        "options": {
+            "template": "index.html",
+            "filename": "/Users/junyong/elance/student/dist/index.html",
+            "hash": false,
+            "inject": true,
+            "compile": true,
+            "favicon": false,
+            "minify": {"removeComments": true, "collapseWhitespace": true, "removeAttributeQuotes": true},
+            "cache": true,
+            "showErrors": true,
+            "chunks": "all",
+            "excludeChunks": [],
+            "title": "Webpack App",
+            "xhtml": false,
+            "chunksSortMode": "dependency"
+        }
+    }, {
+        "chunkNames": "vendor",
+        "ident": "/Users/junyong/elance/student/node_modules/webpack/lib/optimize/CommonsChunkPlugin.js0"
+    }, {
+        "chunkNames": "manifest",
+        "selectedChunks": ["vendor"],
+        "ident": "/Users/junyong/elance/student/node_modules/webpack/lib/optimize/CommonsChunkPlugin.js1"
+    }]
 }
