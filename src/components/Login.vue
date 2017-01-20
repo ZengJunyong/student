@@ -4,7 +4,7 @@
         <mt-field label="用户名" placeholder="请输入用户名" v-model="account.username"></mt-field>
         <mt-field label="密码" placeholder="请输入密码" type="password" v-model="account.password"></mt-field>
         <div class="btn">
-            <mt-button type="primary" @click.native="login">登录</mt-button>
+            <mt-button type="primary" :disabled="!verify.$valid" @click.native="login">登录</mt-button>
         </div>
     </div>
 </template>
@@ -25,6 +25,12 @@
             login: ->
                 {username, password} = this.account
                 console.log {username, password}
+        created: ->
+            @.$verify
+                'account.username':
+                    required: true
+                'account.password':
+                    required: true
 </script>
 
 <style lang="scss" scoped rel="stylesheet/scss">
