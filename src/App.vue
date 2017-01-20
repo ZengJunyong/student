@@ -1,17 +1,18 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <dialect></dialect>
     <hello></hello>
   </div>
 </template>
 
 <script>
 import Hello from './components/Hello'
-
+import Dialect from './components/Dialect'
 export default {
   name: 'app',
   components: {
-    Hello
+    Hello, Dialect
   }
 }
 </script>
