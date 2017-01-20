@@ -11,6 +11,7 @@
     "test": "npm run e2e"
   },
   "dependencies": {
+    "mint-ui": "^2.1.0",
     "vue": "^2.1.0"
   },
   "devDependencies": {
