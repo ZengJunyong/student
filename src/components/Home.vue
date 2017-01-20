@@ -1,5 +1,8 @@
 <template>
     <div id="home">
+        <router-link to="/login" style="float: right;text-decoration: none;padding: 6px;">
+            退出
+        </router-link>
         <router-view></router-view>
         <mt-tabbar fixed v-model="view">
             <mt-tab-item id="myInfo">
