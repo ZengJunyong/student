@@ -15,7 +15,34 @@ new Vue({
     render: h => h(App),
     router: new VueRouter({
         routes: [
-            {path: '/login', component: require('components/Login')}
+            {path: '/', redirect: '/login'},
+            {name: 'login', path: '/login', component: require('components/Login')},
+            {
+                path: '/home', component: require('components/Home'),
+                children: [
+                    {path: '/', redirect: {name: 'myInfo'}},
+                    {
+                        name: 'myInfo',
+                        path: 'myInfo',
+                        component: require('components/MyInfo')
+                    },
+                    {
+                        name: 'myTimeTable',
+                        path: 'myTimeTable',
+                        component: require('components/MyTimeTable')
+                    },
+                    {
+                        name: 'notification',
+                        path: 'notification',
+                        component: require('components/notification')
+                    },
+                    {
+                        name: 'myApp',
+                        path: 'myApp',
+                        component: require('components/MyApp')
+                    }
+                ]
+            }
         ]
     })
 })

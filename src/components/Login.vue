@@ -9,12 +9,6 @@
     </div>
 </template>
 
-<script>
-    export default {
-        name: 'Login'
-    };
-</script>
-
 <script lang="coffee" type="text/coffeescript">
     module.exports =
         name: 'Login'
@@ -25,6 +19,7 @@
             login: ->
                 {username, password} = this.account
                 console.log {username, password}
+                @.$router.push 'home'
         created: ->
             @.$verify
                 'account.username':
