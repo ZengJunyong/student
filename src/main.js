@@ -3,13 +3,20 @@
 import Vue from 'vue'
 import Mint from 'mint-ui'
 import 'mint-ui/lib/style.css'
+import VueRouter from 'vue-router'
+import Home from 'components/Home'
 import App from './App'
 
+Vue.use(VueRouter)
 Vue.use(Mint)
 
-/* eslint-disable no-new */
 new Vue({
   el: '#app',
-  template: '<App/>',
-  components: { App }
+  render: h => h(App),
+  router: new VueRouter({
+    routes: [
+      {path: '/login', component: require('components/Login')},
+      {path: '/home', component: Home}
+    ]
+  })
 })

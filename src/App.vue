@@ -4,6 +4,9 @@
     <dialect></dialect>
     <mintStarter></mintStarter>
     <hello></hello>
+    <router-link to="/login">Go to login</router-link>
+    <router-link to="/home">Go to home</router-link>
+    <router-view></router-view>
   </div>
 </template>
 
