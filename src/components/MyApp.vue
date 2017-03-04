@@ -1,6 +1,6 @@
 <template>
     <div>
-        <router-link to="/login" style="float: right;text-decoration: none;padding: 6px;">
+        <router-link to="/login" class="btn btn-primary btn-block btn-lg">
             退出
         </router-link>
     </div>

@@ -16,7 +16,7 @@
             </mt-tab-item>
             <mt-tab-item id="myApp">
                 <img slot="icon" src="../assets/100x100.png">
-                应用
+                设置
             </mt-tab-item>
         </mt-tabbar>
     </div>
