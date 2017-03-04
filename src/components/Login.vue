@@ -1,10 +1,24 @@
 <template>
-    <div id="login">
-        <mt-header title="登录"></mt-header>
-        <mt-field label="用户名" placeholder="请输入用户名" v-model="account.username"></mt-field>
-        <mt-field label="密码" placeholder="请输入密码" type="password" v-model="account.password"></mt-field>
-        <div class="btn">
-            <mt-button type="primary" :disabled="!verify.$valid" @click.native="login">登录</mt-button>
+    <div>
+        <img src="../assets/01.jpg" alt="">
+        <div class="row">
+            <div class="col-xs-12">
+
+                <form>
+                    <div class="form-group">
+                        <label for="username">用户名</label>
+                        <input v-model="account.username" type="text" class="form-control" id="username"
+                               placeholder="请输入用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码</label>
+                        <input v-model="account.password" type="password" class="form-control" id="password"
+                               placeholder="请输入密码">
+                    </div>
+                    <button :disabled="!verify.$valid" @click="login" type="button" class="btn btn-primary btn-block btn-lg">登录</button>
+                </form>
+                <p style="margin-top: 10px;">当前在线人数 3</p>
+            </div>
         </div>
     </div>
 </template>
@@ -29,11 +43,11 @@
 </script>
 
 <style lang="scss" scoped rel="stylesheet/scss">
-    .btn {
-        text-align: center;
-        margin-top: 15px;
-        button {
-            padding: 5px 50px;
-        }
+    .row {
+        padding: 5px;
+    }
+
+    img {
+        width: 100%;
     }
 </style>

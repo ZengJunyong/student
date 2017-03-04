@@ -1,8 +1,8 @@
 <template>
     <div id="time-table">
-        <mt-header title="我的课表"></mt-header>
         <div class="content">
-            <table>
+            <table class="table filter">
+                <tbody>
                 <tr>
                     <td>学年学期：</td>
                     <td>周次：</td>
@@ -35,8 +35,10 @@
                         </select>
                     </td>
                 </tr>
+                </tbody>
             </table>
-            <table>
+            <table class="table">
+                <tbody>
                 <tr>
                     <td>第一大节 <br> 0102 <br> 上午</td>
                     <td>运动解剖生理学 <br> 刘飞(0102) <br> 102 <br> 15运训2班 <br> 3-11 周</td>
@@ -57,6 +59,7 @@
                     <td>第五大节 <br> 0910 <br> 晚上</td>
                     <td>运动生理学 <br> 彭玮(0506) <br> 102 <br> 15运训2班 <br> 1-18 周</td>
                 </tr>
+                </tbody>
             </table>
         </div>
     </div>
@@ -74,7 +77,7 @@
 </script>
 
 <style lang="scss" scoped rel="stylesheet/scss">
-    table {
-        width: 100%;
-    }
+  .filter td{
+      border: none;
+  }
 </style>

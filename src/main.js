@@ -1,5 +1,6 @@
-import "assets/main.css"
 import 'mint-ui/lib/style.css'
+import "../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss"
+import "assets/main.css"
 
 import Vue from 'vue'
 import Mint from 'mint-ui'

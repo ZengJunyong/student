@@ -1,19 +1,52 @@
 <template>
     <div id="info">
-        <mt-header title="我的信息"></mt-header>
         <div id="student-img">
             <img src="../assets/100x100.png" alt="">
         </div>
-        <mt-field label="学号" v-model="map.xh"></mt-field>
-        <mt-field label="姓名" v-model="map.xm"></mt-field>
-        <mt-field label="性别" v-model="map.xbmc"></mt-field>
-        <mt-field label="身份证号" v-model="map.sfzh"></mt-field>
-        <mt-field label="入学年份" v-model="map.rxnf"></mt-field>
-        <mt-field label="所在院系" v-model="map.dwmc"></mt-field>
-        <mt-field label="年级" v-model="map.nj"></mt-field>
-        <mt-field label="专业" v-model="map.dwmc"></mt-field>
-        <mt-field label="民族" v-model="map.mzmc"></mt-field>
-        <mt-field label="政治面貌" v-model="map.zzmmmc"></mt-field>
+        <table class="table">
+            <tbody>
+            <tr>
+                <th scope="row">学号</th>
+                <td>{{ map.xh }}</td>
+            </tr>
+            <tr>
+                <th scope="row">姓名</th>
+                <td>{{ map.xm }}</td>
+            </tr>
+            <tr>
+                <th scope="row">性别</th>
+                <td>{{ map.xbmc }}</td>
+            </tr>
+            <tr>
+                <th scope="row">身份证号</th>
+                <td>{{ map.sfzh }}</td>
+            </tr>
+            <tr>
+                <th scope="row">入学年份</th>
+                <td>{{ map.rxnf }}</td>
+            </tr>
+            <tr>
+                <th scope="row">所在院系</th>
+                <td>{{ map.dwmc }}</td>
+            </tr>
+            <tr>
+                <th scope="row">年级</th>
+                <td>{{ map.nj }}</td>
+            </tr>
+            <tr>
+                <th scope="row">专业</th>
+                <td>{{ map.dwmc }}</td>
+            </tr>
+            <tr>
+                <th scope="row">民族</th>
+                <td>{{ map.mzmc }}</td>
+            </tr>
+            <tr>
+                <th scope="row">政治面貌</th>
+                <td>{{ map.zzmmmc }}</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </template>
 
