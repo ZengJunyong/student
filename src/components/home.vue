@@ -2,11 +2,11 @@
     <div id="home">
         <router-view></router-view>
         <mt-tabbar fixed v-model="view">
-            <mt-tab-item id="myInfo">
+            <mt-tab-item id="my.info">
                 <img slot="icon" src="../assets/100x100.png">
                 我的信息
             </mt-tab-item>
-            <mt-tab-item id="myTimeTable">
+            <mt-tab-item id="my.time.table">
                 <img slot="icon" src="../assets/100x100.png">
                 我的课表
             </mt-tab-item>
@@ -14,7 +14,7 @@
                 <img slot="icon" src="../assets/100x100.png">
                 消息通知
             </mt-tab-item>
-            <mt-tab-item id="myApp">
+            <mt-tab-item id="my.app">
                 <img slot="icon" src="../assets/100x100.png">
                 设置
             </mt-tab-item>
@@ -26,7 +26,7 @@
     module.exports =
         name: 'Home'
         data: ->
-            view: 'myInfo'
+            view: 'my.info'
         watch:
             view: (v)->
                 @.$router.push name: v

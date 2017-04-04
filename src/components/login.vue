@@ -33,7 +33,7 @@
             login: ->
                 {username, password} = this.account
                 console.log {username, password}
-                @.$router.push 'home'
+                @.$router.push name: 'my.info'
         created: ->
             @.$verify
                 'account.username':
