@@ -17,31 +17,15 @@ new Vue({
     router: new VueRouter({
         routes: [
             {path: '/', redirect: '/login'},
-            {name: 'login', path: '/login', component: require('components/login')},
+            {path: '/login', name: 'login', component: require('components/login')},
             {
                 path: '/home', component: require('components/home'),
                 children: [
                     {path: '/', redirect: {name: 'my.info'}},
-                    {
-                        name: 'my.info',
-                        path: 'my.info',
-                        component: require('components/my.info')
-                    },
-                    {
-                        name: 'my.time.table',
-                        path: 'my.time.table',
-                        component: require('components/my.time.table')
-                    },
-                    {
-                        name: 'notification',
-                        path: 'notification',
-                        component: require('components/notification')
-                    },
-                    {
-                        name: 'my.app',
-                        path: 'my.app',
-                                component: require('components/my.app')
-                    }
+                    {path: '/my.info', name: 'my.info', component: require('components/my.info')},
+                    {path: '/my.time.table', name: 'my.time.table', component: require('components/my.time.table')},
+                    {path: '/notification', name: 'notification', component: require('components/notification')},
+                    {path: '/my.app', name: 'my.app', component: require('components/my.app')}
                 ]
             }
         ]
