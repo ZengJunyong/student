@@ -18,6 +18,7 @@ new Vue({
         routes: [
             {path: '/', redirect: '/login'},
             {path: '/login', name: 'login', component: require('components/login')},
+            {path: '/menu', name: 'menu', component: require('components/menu')},
             {
                 path: '/home', component: require('components/home'),
                 children: [

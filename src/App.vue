@@ -1,5 +1,5 @@
 <template>
-    <div class="container-liquid" id="app">
+    <div class="container-fluid" id="app">
         <router-view></router-view>
     </div>
 </template>
@@ -9,3 +9,10 @@
         name: 'app'
     }
 </script>
+
+<style lang="scss" scoped rel="stylesheet/scss">
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+</style>
